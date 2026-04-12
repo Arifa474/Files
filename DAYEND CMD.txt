@@ -1,0 +1,40 @@
+
+dzdo su - prfusrtest1
+cd /v76upgisltest (directory choose from Env sheet)
+cd /v76upgcontest
+cd /v76cusisltest
+cd /v76cuscontest
+./scripts/backup_profile.sh
+./dm
+d ^DRV
+@QUERUN
+Select DAYEND
+d ^ZBCHMON
+669047774800807
+
+--- Pre checks --
+GTM>zwr ^TTLPA
+^TTLPA("PA")="66484|18605|35808"
+
+GTM>W ^CUVAR(2)
+66484
+
+* TTLPA 1st node should be less than 1 of the currentsystem date
+GTM>zwr ^TTLPA
+^TTLPA("PA")="66486|20958|31392"
+
+/v76upgisltest - Success, SD changed to 09 JULY 2023
+/v76upgcontest - Success, SD changed to 09 JULY 2023
+/v76cusisltest - Success, SD changed to 24 APR 2023
+/v76cuscontest - Success, SD changed to 17 APR 2023
+
+
+
+
+When Date of Imitimation of Death is after DOB and before system date, no error should come.(As of now getting error)
+Steps-
+DOB-
+System Date-
+Date of Intimation-
+
+673- Add screnshot where Date of Intimation is after System date
